@@ -1,4 +1,4 @@
-package com.restuarant.restaurant;
+package com.dasza.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
