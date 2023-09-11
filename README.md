@@ -5,4 +5,4 @@ and JPA to connect with PostgreSQL and Web to create Rest API.
 ## Stack
 Language: Java </br>
 Framework: Spring Boot </br>
-Dependencies: JWT, Security, JPA, Web
+Dependencies: JWT, Security, JPA, Web, Lombok
