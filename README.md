@@ -1,4 +1,4 @@
-# restaurant
+# Restaurant
 Restuarant web application which is created by using Java Spring Boot using JWT and Spring Security to register and login with user
 and JPA to connect with PostgreSQL and Web to create Rest API.
 
