@@ -1,5 +1,7 @@
 package com.dasza.restaurant.auth.user;
 
+
+import com.dasza.restaurant.restaurant.menu.Order;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
@@ -31,7 +33,15 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+    // Define the many-to-many relationship with Order
+    @ManyToMany
 
+    @JoinTable(
+            name = "user_order",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "order_id")
+    )
+    private List<Order> orders;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
